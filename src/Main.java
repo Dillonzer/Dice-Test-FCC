@@ -11,7 +11,7 @@ public class Main {
 		statistics.startSimulation();
 		for (int i = 0; i < statistics.getAmountOfIterations(); i++) {
 			Game game = new Game(DICE_COUNT);
-			while (game.isGameOngoing()) {
+			while (game.isOngoing()) {
 				game.RollDice();
 			}
 

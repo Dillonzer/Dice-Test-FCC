@@ -61,7 +61,7 @@ public class Game {
 		dice.removeFirst();
 	}
 
-	public boolean isGameOngoing() {
+	public boolean isOngoing() {
 		return !dice.isEmpty();
 	}
 
