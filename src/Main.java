@@ -6,7 +6,7 @@ public class Main {
 	private final static int DICE_COUNT = 6;
 
 	public static void main(String[] args) {
-		GameStats statistics = new GameStats(ITERATIONS);
+		GameStats statistics = new GameStats(ITERATIONS, DICE_COUNT);
 
 		statistics.startSimulation();
 		for (int i = 0; i < statistics.getAmountOfIterations(); i++) {

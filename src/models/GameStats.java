@@ -12,6 +12,8 @@ public class GameStats {
 	@Setter(AccessLevel.NONE)
 	private int amountOfIterations;
 	@Setter(AccessLevel.NONE)
+	private int numberOfDice;
+	@Setter(AccessLevel.NONE)
 	private Map<Integer, Double> averages = new HashMap<>();
 	@Setter(AccessLevel.NONE)
 	private Map<Integer, Integer> rollOccurrences = new HashMap<>();
@@ -22,8 +24,9 @@ public class GameStats {
 	@Setter(AccessLevel.NONE)
 	private long durationOfSimulation;
 
-	public GameStats(int amountOfIterations) {
+	public GameStats(int amountOfIterations, int diceCount) {
 		this.amountOfIterations = amountOfIterations;
+		this.numberOfDice = diceCount;
 	}
 
 	public void startSimulation() {
@@ -45,7 +48,7 @@ public class GameStats {
 	}
 
 	public void outputSimulationStatistics() {
-		System.out.println("Number of simulations ran: " + amountOfIterations);
+		System.out.println("Number of simulations was " + amountOfIterations + " using " + numberOfDice + " dice.");
 		averages.forEach((k, v) -> System.out.println("Total " + k + " occurs " + v + " occurred " + rollOccurrences.get(k) + " times."));
 		System.out.println("Total duration: " + durationOfSimulation + "ms");
 	}
