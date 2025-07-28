@@ -7,7 +7,7 @@ import lombok.Setter;
 @Data
 public class Die {
 	@Setter(AccessLevel.NONE)
-	public int rollValue;
+	private int rollValue;
 
 	public void Roll() {
 		rollValue = (int) (Math.random() * 6 + 1);
